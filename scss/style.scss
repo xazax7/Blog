@@ -12,13 +12,9 @@ body {
 }
 
 .newsletter-join {
-    margin: 0 auto;
-    max-width: 1200px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     color: $light-font;
     font-size: 0.8rem;
 
@@ -58,10 +54,9 @@ body {
 }
 
 header {
-    width: 100%;
-    background-color: rgb(229, 236, 229);
     height: 8.5rem;
     display: flex;
+    justify-content: space-between;
 
     .logo {
         display: flex;
@@ -74,10 +69,10 @@ header {
 
         &-img {
             font-size: 4rem;
-            font-family: serif;
+            //font-family: serif;
             transform: scale(0.5, 1);
             text-decoration: underline;
-
+            font-family: "Palatino Linotype", serif;
         }
 
         &-text {
@@ -85,75 +80,117 @@ header {
             font-size: 1rem;
             letter-spacing: 5px;
             font-weight: 0;
-            line-height: 3px;
+            line-height: 13px;
             margin-bottom: -20px;
         }
     }
 
-
     .logo,
-    .nav {
+    .nav-container {
         flex: auto;
     }
 
-    .logo {
-        flex: 0.5;
-    }
-
-    .nav {
-        flex: 1;
-    }
-
-    .nav {
+    .nav-container {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
 
-        ul {
+        .nav {
             text-align: right;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 0.2rem;
 
-            li {
-                display: inline-block;
-                margin: 0 1rem;
+            // Links with dropdown links
+            &-link-dropdown {
+                margin: 0.3rem 0.7rem;
 
 
-                a {
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    font-size: 0.7rem;
-                    letter-spacing: 2px;
+                // Link itself
+                .nav-link {
+                    padding: 0.2rem;
                 }
 
-                .fa-search {
-                    font-size: 0.8rem;
-                    float: right;
+                .dropdown-content {
+                    background: rgb(241, 241, 241);
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    z-index: 1;
+                    padding: 15px 18px;
+                    text-align: center;
+                    min-width: 180px;
+                    display: block;
+                    margin-left: -25px;
+                    margin-top: 10px;
 
+                    li {
+                        a {}
+
+                        a.dropdown-link {
+                            line-height: 2;
+                            padding: 0.2rem 0.5rem;
+                        }
+                    }
                 }
             }
+
+            .nav-link-dropdown:hover .dropdown-content {
+                visibility: visible;
+                opacity: 1;
+                transition: 0.2s;
+                margin-left: -4rem;
+                margin-top: 0px;
+            }
+
+            // Fix positioning of dropdown on last link. Could do media query? Useful for mobile?
+            .nav-link-dropdown:last-of-type:hover .dropdown-content {
+                margin-left: -120px;
+            }
+
+            &-link-dropdown,
+            .fa-search {
+                display: inline-block;
+            }
         }
+
+
+
+
+        //.nav-link-dropdown {}
+
+        //ul {
+        //text-align: right;
+
+        // li {
+        //     //Thjis messing up my :block
+        //     //display: inline-block;
+        //     //margin: 0 1rem;
+
+
+        //     a {
+        //         //text-transform: uppercase;
+        //         //text-decoration: none;
+        //         //font-size: 0.7rem;
+        //         //letter-spacing: 2px;
+        //     }
+
+        //     .fa-search {
+        //         //font-size: 0.8rem;
+        //         // float: right;
+
+        //     }
+        // }
+
+        //}
     }
 }
-
-
 
 a {
     color: $dark-font;
+    text-decoration: none;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    z-index: 1;
-    padding: 12px 18px;
-    text-align: center;
-
-
-    a {
-        margin: 5px 0;
-        display: block;
-    }
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+li {
+    list-style-type: none;
 }
