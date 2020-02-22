@@ -1,0 +1,126 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.m-1 {
+  margin: 1rem; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.p-1 {
+  padding: 1rem; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.m-2 {
+  margin: 2rem; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.p-2 {
+  padding: 2rem; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.m-3 {
+  margin: 3rem; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.p-3 {
+  padding: 3rem; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.m-4 {
+  margin: 4rem; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.p-4 {
+  padding: 4rem; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.m-5 {
+  margin: 5rem; }
+
+.my-5 {
+  margin: 5rem 0; }
+
+.p-5 {
+  padding: 5rem; }
+
+.py-5 {
+  padding: 5rem 0; }
+
+.vertical-bar {
+  width: 1px;
+  height: 20px;
+  margin-bottom: -5px;
+  margin-right: 1rem;
+  background: rgba(255, 255, 255, 0.5); }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500; }
+
+.newsletter-join {
+  padding: 0.5rem 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #e9e9e9;
+  background-color: #727272; }
+  .newsletter-join div,
+  .newsletter-join p {
+    display: inline-block; }
+  .newsletter-join * {
+    color: #e9e9e9;
+    font-size: 0.7rem; }
+  .newsletter-join input,
+  .newsletter-join button {
+    background: none;
+    border: none;
+    padding: 0.2rem;
+    margin: 0.2rem; }
+  .newsletter-join button {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600; }
+  .newsletter-join input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5); }
+  .newsletter-join input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5); }
+  .newsletter-join input::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5); }
+  .newsletter-join input::placeholder {
+    color: rgba(255, 255, 255, 0.5); }
+  .newsletter-join .social-media-icons i {
+    color: #e9e9e9;
+    margin: 0 0.3rem; }
+
+header {
+  width: 100%;
+  background-color: green;
+  height: 8.5rem; }
+
+.logo div {
+  display: inline-block; }

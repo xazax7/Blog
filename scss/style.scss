@@ -1,0 +1,72 @@
+@import 'resets';
+@import 'utilities';
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+}
+
+
+.newsletter-join {
+    padding: 0.5rem 2rem;
+
+    div,
+    p {
+        display: inline-block;
+    }
+
+    * {
+        color: $light-font;
+        font-size: 0.7rem;
+    }
+
+    width:100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: $light-font;
+    background-color: $primary-dark;
+
+    .signup {}
+
+    input,
+    button {
+        background: none;
+        border: none;
+        padding: 0.2rem;
+        margin: 0.2rem;
+    }
+
+    button {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .social-media-icons {
+        i {
+            color: $light-font;
+            margin: 0 0.3rem;
+        }
+
+    }
+
+}
+
+header {
+    width: 100%;
+    background-color: green;
+    height: 8.5rem;
+}
+
+.logo {
+    div {
+        display: inline-block;
+    }
+}
