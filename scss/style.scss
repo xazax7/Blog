@@ -2,34 +2,40 @@
 @import 'utilities';
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
+.newsletter-container {
+    background-color: $primary-dark;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
 
 .newsletter-join {
-    padding: 0.5rem 2rem;
-
-    div,
-    p {
-        display: inline-block;
-    }
-
-    * {
-        color: $light-font;
-        font-size: 0.7rem;
-    }
-
-    width:100%;
+    margin: 0 auto;
+    max-width: 1200px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     color: $light-font;
-    background-color: $primary-dark;
+    font-size: 0.8rem;
 
-    .signup {}
+    div,
+    p {
+        display: inline-block;
+    }
+
+    button {
+        color: $light-font;
+        font-weight: bolder;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.6rem;
+        cursor: pointer;
+
+    }
 
     input,
     button {
@@ -37,12 +43,6 @@ body {
         border: none;
         padding: 0.2rem;
         margin: 0.2rem;
-    }
-
-    button {
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-weight: 600;
     }
 
     input::placeholder {
@@ -54,19 +54,106 @@ body {
             color: $light-font;
             margin: 0 0.3rem;
         }
-
     }
-
 }
 
 header {
     width: 100%;
-    background-color: green;
+    background-color: rgb(229, 236, 229);
     height: 8.5rem;
+    display: flex;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+
+        div {
+            display: inline-block;
+        }
+
+        &-img {
+            font-size: 4rem;
+            font-family: serif;
+            transform: scale(0.5, 1);
+            text-decoration: underline;
+
+        }
+
+        &-text {
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 5px;
+            font-weight: 0;
+            line-height: 3px;
+            margin-bottom: -20px;
+        }
+    }
+
+
+    .logo,
+    .nav {
+        flex: auto;
+    }
+
+    .logo {
+        flex: 0.5;
+    }
+
+    .nav {
+        flex: 1;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+
+        ul {
+            text-align: right;
+
+            li {
+                display: inline-block;
+                margin: 0 1rem;
+
+
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: 0.7rem;
+                    letter-spacing: 2px;
+                }
+
+                .fa-search {
+                    font-size: 0.8rem;
+                    float: right;
+
+                }
+            }
+        }
+    }
 }
 
-.logo {
-    div {
-        display: inline-block;
+
+
+a {
+    color: $dark-font;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    z-index: 1;
+    padding: 12px 18px;
+    text-align: center;
+
+
+    a {
+        margin: 5px 0;
+        display: block;
     }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

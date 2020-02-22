@@ -7,47 +7,66 @@
     <link rel="stylesheet" href="dist/css/style.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
         integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
     <!-- Newsletter -->
-    <div class="newsletter-join">
-        <div>
-            <i class="fas fa-envelope fa-1x"></i>
-            <p>Join Our Weekly Newsletter</p>
-        </div>
-        <div class="signup">
-            <input type="text" placeholder="Your Name">
-            <div class="vertical-bar"></div>
-            <input type="email" placeholder="Your Email Address">
-            <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
-        </div>
-        <div class="social-media-icons">
-            <a href=""><i class="fab fa-twitter fa-1x"></i></a>
-            <a href=""><i class="fab fa-facebook fa-1x"></i></a>
-            <a href=""><i class="fab fa-youtube fa-1x"></i></a>
-            <a href=""><i class="fab fa-instagram fa-1x"></i></a>
-        </div>
+    <div class="newsletter-container">
+        <div class="newsletter-join">
+            <div>
+                <i class="fas fa-envelope fa-1x"></i>
+                <p>Join Our Weekly Newsletter</p>
+            </div>
+            <div class="signup">
+                <input type="text" placeholder="Your Name">
+                <div class="vertical-bar"></div>
+                <input type="email" placeholder="Your Email Address">
+                <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="social-media-icons">
+                <a href=""><i class="fab fa-twitter fa-1x"></i></a>
+                <a href=""><i class="fab fa-facebook fa-1x"></i></a>
+                <a href=""><i class="fab fa-youtube fa-1x"></i></a>
+                <a href=""><i class="fab fa-instagram fa-1x"></i></a>
+            </div>
 
+        </div>
     </div>
     <!-- Header -->
     <header>
         <div class="logo">
-            <div class="logo-img">G</div>
+            <div class="logo-img">TR</div>
             <div class="logo-text">The Trade Road</div>
         </div>
         <!-- Nav -->
         <div class="nav">
             <ul>
-                <li><a href="" class="nav-link">Fashion</a></li>
-                <li><a href="" class="nav-link">Beauty</a></li>
+                <li class="dropdown">
+                    <a href="" class="nav-link dropbtn">Fashion</a>
+                    <div class="dropdown-content">
+                        <a href="">All Fashion</a>
+                        <a href="">Shopping Guides</a>
+                        <a href="">Tips & Trends</a>
+                        <a href="">Week of Outfits</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="nav-link dropbtn">Beauty</a>
+                    <div class="dropdown-content">
+                        <a href="">All Fashion</a>
+                        <a href="">Shopping Guides</a>
+                        <a href="">Tips & Trends</a>
+                        <a href="">Week of Outfits</a>
+                    </div>
+                </li>
                 <li><a href="" class="nav-link">Self</a></li>
                 <li><a href="" class="nav-link">Home</a></li>
                 <li><a href="" class="nav-link">Culture</a></li>
                 <li><a href="" class="nav-link">The Daily Good</a></li>
                 <li><a href="" class="nav-link">About</a></li>
+                <li><a href="" class="fas fa-search fa-1x"></a></li>
             </ul>
         </div>
     </header>
