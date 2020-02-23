@@ -1,6 +1,7 @@
 $light-font: rgb(233, 233, 233);
-$medium-font: rgb(173, 173, 173);
-$dark-font: rgb(48, 48, 48);
+$medium-font: rgb(155, 155, 155);
+$dark-font: rgb(78, 78, 78);
+$darker-font: rgb(22, 22, 22);
 $primary-dark: rgb(114, 114, 114);
 $background-color: white;
 
@@ -48,4 +49,40 @@ $spaceamounts: (1, 2, 3, 4, 5);
     width: 5px;
     height: 5px;
     border-radius: 100%;
+}
+
+section {
+    height: auto;
+    display: block;
+    margin-bottom: 7rem;
+}
+
+.large-img {
+    background: url('/imgs/forest.jpg') center/cover no-repeat;
+}
+
+.grey-bg {
+    background-color: rgb(221, 221, 221);
+}
+
+.active-post {
+    background-color: white !important;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: $medium-font;
+}
+
+button,
+h1,
+.post-title,
+small,
+.post-date {
+    letter-spacing: 2px;
 }

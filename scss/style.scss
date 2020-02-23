@@ -8,7 +8,7 @@ body {
 
 .newsletter-container {
     background-color: $primary-dark;
-    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
 .newsletter-join {
@@ -24,10 +24,8 @@ body {
     }
 
     button {
-        color: $light-font;
-        font-weight: bolder;
+
         text-transform: uppercase;
-        letter-spacing: 2px;
         font-size: 0.6rem;
         cursor: pointer;
 
@@ -35,10 +33,17 @@ body {
 
     input,
     button {
+        color: $light-font;
         background: none;
         border: none;
         padding: 0.2rem;
         margin: 0.2rem;
+        caret-color: rgb(255, 255, 255);
+        font-weight: bolder;
+    }
+
+    input {
+        font-family: sans-serif;
     }
 
     input::placeholder {
@@ -54,7 +59,7 @@ body {
 }
 
 header {
-    height: 8.5rem;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
 
@@ -62,14 +67,12 @@ header {
         display: flex;
         align-items: center;
 
-
         div {
             display: inline-block;
         }
 
         &-img {
             font-size: 4rem;
-            //font-family: serif;
             transform: scale(0.5, 1);
             text-decoration: underline;
             font-family: "Palatino Linotype", serif;
@@ -125,7 +128,7 @@ header {
                     margin-top: 10px;
 
                     li {
-                        a {}
+
 
                         a.dropdown-link {
                             line-height: 2;
@@ -166,34 +169,27 @@ li {
 }
 
 .new-posts-container {
-
     display: flex;
     justify-content: space-around;
+    text-align: center;
 
     .new-post {
-
-        flex: 0.5;
-        padding: 0.9rem;
+        flex: 1;
+        padding: 0.5rem;
 
         &__details {
-
             padding: 1rem;
-            text-align: center;
 
             .post-title {
                 cursor: pointer;
                 text-transform: capitalize;
                 font-family: serif;
-                letter-spacing: 2px;
                 color: $dark-font;
             }
-
-
 
             .post-date {
                 font-size: 0.6rem;
                 color: $medium-font;
-                letter-spacing: 2px;
             }
 
             .dot-decoration {
@@ -203,7 +199,8 @@ li {
 
         .post-img {
             background: url('/imgs/bridge.jpg') center/cover no-repeat;
-            height: 35vw;
+            height: 40vw;
+            min-height: 400px;
             max-height: 600px;
             width: 100%;
         }
@@ -225,8 +222,78 @@ li {
     }
 }
 
-section {
+.trending {
+    color: $dark-font;
+    padding: 7rem 1rem;
     width: 100%;
-    height: auto;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+
+
+    .left-col {
+        text-align: center;
+
+        .dot-decoration {
+            margin: 0 auto 1.3rem;
+        }
+
+
+
+        h1 {
+            color: $darker-font;
+            font-size: 3rem;
+            font-weight: 1;
+            text-transform: uppercase;
+            font-family: serif;
+            padding: 0 3rem 0 1rem;
+            margin: 0 0 -2rem;
+        }
+
+        .large-img {
+            height: 500px;
+        }
+
+        .post-title {
+            font-size: 1.3rem;
+            font-weight: 1;
+            text-transform: capitalize;
+            font-family: serif;
+            display: block;
+            padding: 1rem;
+        }
+
+
+    }
+
+    .right-col {
+
+        .articles {
+
+            &-post {
+                width: 400px;
+                float: right;
+
+                justify-self: right;
+                padding: 1.5rem;
+
+                .post-title {
+                    font-family: serif;
+                    font-weight: lighter;
+                    font-size: 1.2rem;
+                    color: $dark-font;
+                }
+
+                .post-theme {
+                    margin: 0.5rem 0 0 0;
+                }
+            }
+        }
+    }
+
+}
+
+h1 {
+    letter-spacing: 2px;
 }
