@@ -75,6 +75,12 @@
   max-width: 1200px;
   margin: 0 auto; }
 
+.dot-decoration {
+  background-color: #4b4b4b !important;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%; }
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 500; }
@@ -211,3 +217,47 @@ a {
 
 li {
   list-style-type: none; }
+
+.new-posts-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .new-posts-container .new-post {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    padding: 0.9rem; }
+    .new-posts-container .new-post__details {
+      padding: 1rem;
+      text-align: center; }
+      .new-posts-container .new-post__details .post-title {
+        cursor: pointer;
+        text-transform: capitalize;
+        font-family: serif;
+        letter-spacing: 2px;
+        color: #303030; }
+      .new-posts-container .new-post__details .post-date {
+        font-size: 0.6rem;
+        color: #adadad;
+        letter-spacing: 2px; }
+      .new-posts-container .new-post__details .dot-decoration {
+        margin: 1rem auto; }
+    .new-posts-container .new-post .post-img {
+      background: url("/imgs/bridge.jpg") center/cover no-repeat;
+      height: 35vw;
+      max-height: 600px;
+      width: 100%; }
+  .new-posts-container .new-post:hover .post-img,
+  .new-posts-container .new-post:hover .post-title {
+    opacity: 0.8;
+    -webkit-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease; }
+  .new-posts-container .new-post:hover .post-title {
+    text-decoration: underline; }
+
+section {
+  width: 100%;
+  height: auto;
+  display: block; }

@@ -42,3 +42,10 @@ $spaceamounts: (1, 2, 3, 4, 5);
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.dot-decoration {
+    background-color: rgb(75, 75, 75) !important;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}

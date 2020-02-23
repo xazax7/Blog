@@ -153,36 +153,6 @@ header {
                 display: inline-block;
             }
         }
-
-
-
-
-        //.nav-link-dropdown {}
-
-        //ul {
-        //text-align: right;
-
-        // li {
-        //     //Thjis messing up my :block
-        //     //display: inline-block;
-        //     //margin: 0 1rem;
-
-
-        //     a {
-        //         //text-transform: uppercase;
-        //         //text-decoration: none;
-        //         //font-size: 0.7rem;
-        //         //letter-spacing: 2px;
-        //     }
-
-        //     .fa-search {
-        //         //font-size: 0.8rem;
-        //         // float: right;
-
-        //     }
-        // }
-
-        //}
     }
 }
 
@@ -193,4 +163,70 @@ a {
 
 li {
     list-style-type: none;
+}
+
+.new-posts-container {
+
+    display: flex;
+    justify-content: space-around;
+
+    .new-post {
+
+        flex: 0.5;
+        padding: 0.9rem;
+
+        &__details {
+
+            padding: 1rem;
+            text-align: center;
+
+            .post-title {
+                cursor: pointer;
+                text-transform: capitalize;
+                font-family: serif;
+                letter-spacing: 2px;
+                color: $dark-font;
+            }
+
+
+
+            .post-date {
+                font-size: 0.6rem;
+                color: $medium-font;
+                letter-spacing: 2px;
+            }
+
+            .dot-decoration {
+                margin: 1rem auto;
+            }
+        }
+
+        .post-img {
+            background: url('/imgs/bridge.jpg') center/cover no-repeat;
+            height: 35vw;
+            max-height: 600px;
+            width: 100%;
+        }
+
+
+    }
+
+    .new-post:hover {
+
+        .post-img,
+        .post-title {
+            opacity: 0.8;
+            transition: opacity 0.4s ease;
+        }
+
+        .post-title {
+            text-decoration: underline;
+        }
+    }
+}
+
+section {
+    width: 100%;
+    height: auto;
+    display: block;
 }
