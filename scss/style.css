@@ -71,20 +71,11 @@
   margin-right: 1rem;
   background: rgba(255, 255, 255, 0.5); }
 
-.max-width {
-  max-width: 1200px;
-  margin: 0 auto; }
-
 .dot-decoration {
   background-color: #4b4b4b !important;
   width: 5px;
   height: 5px;
   border-radius: 100%; }
-
-section {
-  height: auto;
-  display: block;
-  margin-bottom: 7rem; }
 
 .large-img {
   background: url("/imgs/forest.jpg") center/cover no-repeat; }
@@ -95,28 +86,61 @@ section {
 .active-post {
   background-color: white !important; }
 
-a:hover {
-  opacity: 0.6; }
+.ls2 {
+  letter-spacing: 2px; }
 
 small {
+  letter-spacing: 3px;
   font-size: 0.7rem;
   text-transform: uppercase;
   color: #9b9b9b; }
 
-button,
+a:hover {
+  opacity: 0.6; }
+
 h1,
-.post-title,
-small,
-.post-date {
-  letter-spacing: 2px; }
+h2 {
+  font-family: serif; }
+
+h1 {
+  color: #161616;
+  font-size: 2.5rem;
+  font-weight: 1;
+  text-transform: uppercase; }
+
+h2 {
+  color: #4e4e4e;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-weight: 1;
+  text-transform: capitalize;
+  font-weight: lighter; }
+
+p {
+  font-size: 0.7rem; }
+
+a {
+  color: #4e4e4e;
+  text-decoration: none; }
 
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 500; }
 
+section {
+  height: auto;
+  display: block;
+  margin-bottom: 7rem; }
+
+.newsletter-join,
+header,
+.trending,
+.new-posts-container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 .newsletter-container {
-  background-color: #727272;
-  padding: 0.5rem 2rem 0.5rem 2rem; }
+  background-color: #727272; }
 
 .newsletter-join {
   display: -webkit-box;
@@ -128,17 +152,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #e9e9e9;
-  font-size: 0.8rem; }
+  padding: 0.5rem 0;
+  color: #e9e9e9; }
   .newsletter-join div,
   .newsletter-join p {
     display: inline-block; }
-  .newsletter-join button {
-    text-transform: uppercase;
-    font-size: 0.6rem;
-    cursor: pointer; }
+  .newsletter-join .subscribe-btn small {
+    cursor: pointer;
+    color: #e9e9e9; }
   .newsletter-join input,
-  .newsletter-join button {
+  .newsletter-join .subscribe-btn {
     color: #e9e9e9;
     background: none;
     border: none;
@@ -146,8 +169,6 @@ body {
     margin: 0.2rem;
     caret-color: white;
     font-weight: bolder; }
-  .newsletter-join input {
-    font-family: sans-serif; }
   .newsletter-join input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.5); }
   .newsletter-join input:-ms-input-placeholder {
@@ -161,35 +182,28 @@ body {
     margin: 0 0.3rem; }
 
 header {
-  padding: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  padding: 1.75rem 0; }
   header .logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
-    header .logo div {
-      display: inline-block; }
+            align-items: center;
+    text-transform: uppercase; }
     header .logo-img {
-      font-size: 4rem;
-      -webkit-transform: scale(0.5, 1);
-              transform: scale(0.5, 1);
+      font-size: 3rem;
       text-decoration: underline;
       font-family: "Palatino Linotype", serif; }
     header .logo-text {
-      text-transform: uppercase;
       font-size: 1rem;
       letter-spacing: 5px;
       font-weight: 0;
-      line-height: 13px;
-      margin-bottom: -20px; }
+      margin-bottom: -1rem;
+      padding: 0.4rem; }
   header .logo,
   header .nav-container {
     -webkit-box-flex: 1;
@@ -213,7 +227,7 @@ header {
       header .nav-container .nav-link-dropdown {
         margin: 0.3rem 0.7rem; }
         header .nav-container .nav-link-dropdown .nav-link {
-          padding: 0.2rem; }
+          padding: 0.5rem; }
         header .nav-container .nav-link-dropdown .dropdown-content {
           background: #f1f1f1;
           visibility: hidden;
@@ -224,8 +238,8 @@ header {
           text-align: center;
           min-width: 180px;
           display: block;
-          margin-left: -25px;
-          margin-top: 10px; }
+          margin-left: -2rem;
+          margin-top: 1rem; }
           header .nav-container .nav-link-dropdown .dropdown-content li a.dropdown-link {
             line-height: 2;
             padding: 0.2rem 0.5rem; }
@@ -241,10 +255,6 @@ header {
       header .nav-container .nav-link-dropdown,
       header .nav-container .nav .fa-search {
         display: inline-block; }
-
-a {
-  color: #4e4e4e;
-  text-decoration: none; }
 
 li {
   list-style-type: none; }
@@ -276,8 +286,8 @@ li {
     .new-posts-container .new-post .post-img {
       background: url("/imgs/bridge.jpg") center/cover no-repeat;
       height: 40vw;
-      min-height: 400px;
-      max-height: 600px;
+      min-height: 30rem;
+      max-height: 50rem;
       width: 100%; }
   .new-posts-container .new-post:hover .post-img,
   .new-posts-container .new-post:hover .post-title {
@@ -288,9 +298,7 @@ li {
     text-decoration: underline; }
 
 .trending {
-  color: #4e4e4e;
   padding: 7rem 1rem;
-  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -304,21 +312,14 @@ li {
     .trending .left-col .dot-decoration {
       margin: 0 auto 1.3rem; }
     .trending .left-col h1 {
-      color: #161616;
-      font-size: 3rem;
-      font-weight: 1;
-      text-transform: uppercase;
-      font-family: serif;
       padding: 0 3rem 0 1rem;
       margin: 0 0 -2rem; }
     .trending .left-col .large-img {
-      height: 500px; }
+      height: 35rem;
+      min-height: 2rem;
+      max-height: 35rem;
+      width: 100%; }
     .trending .left-col .post-title {
-      font-size: 1.3rem;
-      font-weight: 1;
-      text-transform: capitalize;
-      font-family: serif;
-      display: block;
       padding: 1rem; }
   .trending .right-col .articles-post {
     width: 400px;
@@ -326,13 +327,5 @@ li {
     -ms-grid-column-align: right;
         justify-self: right;
     padding: 1.5rem; }
-    .trending .right-col .articles-post .post-title {
-      font-family: serif;
-      font-weight: lighter;
-      font-size: 1.2rem;
-      color: #4e4e4e; }
     .trending .right-col .articles-post .post-theme {
       margin: 0.5rem 0 0 0; }
-
-h1 {
-  letter-spacing: 2px; }

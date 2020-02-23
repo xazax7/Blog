@@ -1,38 +1,33 @@
 @import 'resets';
 @import 'utilities';
-
-body {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-}
+@import 'font';
+@import 'basic';
 
 .newsletter-container {
     background-color: $primary-dark;
-    padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
 .newsletter-join {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding: 0.5rem 0;
+
     color: $light-font;
-    font-size: 0.8rem;
 
     div,
     p {
         display: inline-block;
     }
 
-    button {
-
-        text-transform: uppercase;
-        font-size: 0.6rem;
+    .subscribe-btn small {
         cursor: pointer;
-
+        color: $light-font;
     }
 
     input,
-    button {
+    .subscribe-btn {
         color: $light-font;
         background: none;
         border: none;
@@ -40,10 +35,6 @@ body {
         margin: 0.2rem;
         caret-color: rgb(255, 255, 255);
         font-weight: bolder;
-    }
-
-    input {
-        font-family: sans-serif;
     }
 
     input::placeholder {
@@ -59,32 +50,28 @@ body {
 }
 
 header {
-    padding: 1rem 0;
     display: flex;
-    justify-content: space-between;
+    padding: 1.75rem 0;
 
     .logo {
+
         display: flex;
         align-items: center;
+        text-transform: uppercase;
 
-        div {
-            display: inline-block;
-        }
 
         &-img {
-            font-size: 4rem;
-            transform: scale(0.5, 1);
+            font-size: 3rem;
             text-decoration: underline;
             font-family: "Palatino Linotype", serif;
         }
 
         &-text {
-            text-transform: uppercase;
             font-size: 1rem;
             letter-spacing: 5px;
             font-weight: 0;
-            line-height: 13px;
-            margin-bottom: -20px;
+            margin-bottom: -1rem;
+            padding: 0.4rem;
         }
     }
 
@@ -111,7 +98,7 @@ header {
 
                 // Link itself
                 .nav-link {
-                    padding: 0.2rem;
+                    padding: 0.5rem;
                 }
 
                 .dropdown-content {
@@ -124,8 +111,8 @@ header {
                     text-align: center;
                     min-width: 180px;
                     display: block;
-                    margin-left: -25px;
-                    margin-top: 10px;
+                    margin-left: -2rem;
+                    margin-top: 1rem;
 
                     li {
 
@@ -159,10 +146,7 @@ header {
     }
 }
 
-a {
-    color: $dark-font;
-    text-decoration: none;
-}
+
 
 li {
     list-style-type: none;
@@ -200,8 +184,8 @@ li {
         .post-img {
             background: url('/imgs/bridge.jpg') center/cover no-repeat;
             height: 40vw;
-            min-height: 400px;
-            max-height: 600px;
+            min-height: 30rem;
+            max-height: 50rem;
             width: 100%;
         }
 
@@ -223,9 +207,7 @@ li {
 }
 
 .trending {
-    color: $dark-font;
     padding: 7rem 1rem;
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -242,25 +224,20 @@ li {
 
 
         h1 {
-            color: $darker-font;
-            font-size: 3rem;
-            font-weight: 1;
-            text-transform: uppercase;
-            font-family: serif;
             padding: 0 3rem 0 1rem;
             margin: 0 0 -2rem;
         }
 
         .large-img {
-            height: 500px;
+            height: 35rem;
+            min-height: 2rem;
+            max-height: 35rem;
+            width: 100%;
         }
 
         .post-title {
-            font-size: 1.3rem;
-            font-weight: 1;
-            text-transform: capitalize;
-            font-family: serif;
-            display: block;
+
+            //display: block;
             padding: 1rem;
         }
 
@@ -278,12 +255,6 @@ li {
                 justify-self: right;
                 padding: 1.5rem;
 
-                .post-title {
-                    font-family: serif;
-                    font-weight: lighter;
-                    font-size: 1.2rem;
-                    color: $dark-font;
-                }
 
                 .post-theme {
                     margin: 0.5rem 0 0 0;
@@ -292,8 +263,4 @@ li {
         }
     }
 
-}
-
-h1 {
-    letter-spacing: 2px;
 }

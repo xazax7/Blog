@@ -14,7 +14,7 @@
 <body>
     <!-- Newsletter -->
     <div class="newsletter-container">
-        <div class="newsletter-join max-width">
+        <div class="newsletter-join">
             <div>
                 <i class="fas fa-envelope fa-1x"></i>
                 <p>Join Our Weekly Newsletter</p>
@@ -23,7 +23,7 @@
                 <input type="text" placeholder="Your Name">
                 <div class="vertical-bar"></div>
                 <input type="email" placeholder="Your Email Address">
-                <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+                <a class="subscribe-btn"><small>Subscribe <i class="fas fa-arrow-right"></i></small></a>
             </div>
             <div class="social-media-icons">
                 <a href=""><i class="fab fa-twitter fa-1x"></i></a>
@@ -35,13 +35,13 @@
         </div>
     </div>
     <!-- Header -->
-    <header class="max-width">
+    <header>
         <div class="logo">
             <div class="logo-img">TR</div>
             <div class="logo-text">The Trade Road</div>
         </div>
         <!-- Nav -->
-        <div class="nav-container p-1">
+        <div class="nav-container">
             <ul class="nav">
                 <li class="nav-link-dropdown">
                     <a href="" class="nav-link dropbtn">Fashion</a>
@@ -113,13 +113,15 @@
     </header>
     <main>
         <section>
-            <div class="new-posts-container max-width">
+            <div class="new-posts-container">
                 <div class="new-post">
                     <a href="">
                         <div class="post-img"></div>
                     </a>
                     <div class="new-post__details">
-                        <a class="post-title">6 newly-discovered effects of pine needles</a>
+                        <a class="post-title">
+                            <h2>6 newly-discovered effects of pine needles</h2>
+                        </a>
                         <div class="dot-decoration"></div>
                         <small class="post-date">Feb 20, 2020</small>
                     </div>
@@ -129,7 +131,9 @@
                         <div class="post-img"></div>
                     </a>
                     <div class="new-post__details">
-                        <a class="post-title">Why you *should* buy a ficus</a>
+                        <a class="post-title">
+                            <h2>Why you *should* buy a ficus</h2>
+                        </a>
                         <div class="dot-decoration"></div>
                         <small class="post-date">Feb 18, 2020</small>
                     </div>
@@ -139,7 +143,9 @@
                         <div class="post-img"></div>
                     </a>
                     <div class="new-post__details">
-                        <a class="post-title">The cause-and-effect of environmental plasticity</a>
+                        <a class="post-title">
+                            <h2>The cause-and-effect of environmental plasticity</h2>
+                        </a>
                         <div class="dot-decoration"></div>
                         <small class="post-date">Feb 12, 2020</small>
                     </div>
@@ -148,37 +154,49 @@
             </div>
         </section>
         <section class="grey-bg">
-            <div class="trending max-width">
+            <div class="trending">
                 <div class="left-col">
                     <h1>Trending this week</h1>
                     <div class="large-img"></div>
-                    <a class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    <a class="post-title">
+                        <h2>Lorem ipsum dolor sit amet adipisicing elit.</h2>
+                    </a>
                     <div class="dot-decoration"></div>
                     <small class="post-theme">Self</small>
                 </div>
                 <div class="right-col">
                     <div class="articles">
                         <div class="articles-post active-post">
-                            <h1 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi?
-                            </h1>
+                            <a href="">
+                                <h2>Lorem ipsum dolor sit amet adipisic ing elit. Excepturi?</h2>
+                            </a>
                             <small class="post-theme">Self</small>
                         </div>
                         <div class="articles-post">
-                            <h1 class="post-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
+                            <a>
+                                <h2>Lorem ipsum dolor sit amet, adipis icing elit.</h2>
+                            </a>
                             <small class="post-theme">Fashion</small>
                         </div>
                         <div class="articles-post">
-                            <h1 class="post-title">Lorem ipsum dolor sit amet consectetur.</h1>
+                            <a>
+                                <h2>Lorem ipsum dolor sit amet dolor ipsum.</h2>
+                            </a>
                             <small class="post-theme">Theme</small>
                         </div>
                         <div class="articles-post">
-                            <h1 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-                                numquam!</h1>
+                            <a>
+                                <h2>Lorem ipsum dolor sit amet consect etur adipis icing elit. Ducimus,
+                                    numquam!</h2>
+                            </a>
                             <small class="post-theme">Sleep</small>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <section>
+
         </section>
     </main>
 </body>

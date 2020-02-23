@@ -39,22 +39,11 @@ $spaceamounts: (1, 2, 3, 4, 5);
     background: rgba(255, 255, 255, .5);
 }
 
-.max-width {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .dot-decoration {
     background-color: rgb(75, 75, 75) !important;
     width: 5px;
     height: 5px;
     border-radius: 100%;
-}
-
-section {
-    height: auto;
-    display: block;
-    margin-bottom: 7rem;
 }
 
 .large-img {
@@ -67,22 +56,4 @@ section {
 
 .active-post {
     background-color: white !important;
-}
-
-a:hover {
-    opacity: 0.6;
-}
-
-small {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    color: $medium-font;
-}
-
-button,
-h1,
-.post-title,
-small,
-.post-date {
-    letter-spacing: 2px;
 }

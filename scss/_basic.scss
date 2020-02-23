@@ -1,0 +1,20 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+
+section {
+    height: auto;
+    display: block;
+    margin-bottom: 7rem;
+}
+
+
+.newsletter-join,
+header,
+.trending,
+.new-posts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}

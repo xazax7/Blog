@@ -1,0 +1,44 @@
+.ls2 {
+    letter-spacing: 2px;
+}
+
+small {
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: $medium-font;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+h1,
+h2 {
+    font-family: serif;
+}
+
+h1 {
+    color: $darker-font;
+    font-size: 2.5rem;
+    font-weight: 1;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: $dark-font;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: 1;
+    text-transform: capitalize;
+    font-weight: lighter;
+}
+
+p {
+    font-size: 0.7rem;
+}
+
+a {
+    color: $dark-font;
+    text-decoration: none;
+}
