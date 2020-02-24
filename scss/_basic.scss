@@ -7,14 +7,18 @@ body {
 section {
     height: auto;
     display: block;
-    margin-bottom: 7rem;
+    //margin-bottom: 7rem;
 }
 
 
-.newsletter-join,
+.newsletter,
 header,
 .trending,
 .new-posts-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
+
+.new-post {}
+
+.trending {}
