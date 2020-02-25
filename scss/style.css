@@ -4,95 +4,12 @@
   margin: 0;
   padding: 0; }
 
-.m-1 {
-  margin: 0.5/2rem; }
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500; }
 
-.my-1 {
-  margin: 0.5rem 0; }
-
-.mx-1 {
-  margin: 0 0.5rem; }
-
-.p-1 {
-  padding: 0.5rem; }
-
-.px-1 {
-  padding: 0.5rem; }
-
-.py-1 {
-  padding: 0.5rem 0; }
-
-.m-2 {
-  margin: 1/2rem; }
-
-.my-2 {
-  margin: 1rem 0; }
-
-.mx-2 {
-  margin: 0 1rem; }
-
-.p-2 {
-  padding: 1rem; }
-
-.px-2 {
-  padding: 1rem; }
-
-.py-2 {
-  padding: 1rem 0; }
-
-.m-3 {
-  margin: 1.5/2rem; }
-
-.my-3 {
-  margin: 1.5rem 0; }
-
-.mx-3 {
-  margin: 0 1.5rem; }
-
-.p-3 {
-  padding: 1.5rem; }
-
-.px-3 {
-  padding: 1.5rem; }
-
-.py-3 {
-  padding: 1.5rem 0; }
-
-.m-4 {
-  margin: 2/2rem; }
-
-.my-4 {
-  margin: 2rem 0; }
-
-.mx-4 {
-  margin: 0 2rem; }
-
-.p-4 {
-  padding: 2rem; }
-
-.px-4 {
-  padding: 2rem; }
-
-.py-4 {
-  padding: 2rem 0; }
-
-.m-5 {
-  margin: 2.5/2rem; }
-
-.my-5 {
-  margin: 2.5rem 0; }
-
-.mx-5 {
-  margin: 0 2.5rem; }
-
-.p-5 {
-  padding: 2.5rem; }
-
-.px-5 {
-  padding: 2.5rem; }
-
-.py-5 {
-  padding: 2.5rem 0; }
+li {
+  list-style: none; }
 
 .vertical-bar {
   width: 1px;
@@ -109,22 +26,19 @@
   margin: 3rem; }
 
 .dot-decoration {
-  background-color: #4b4b4b !important;
+  background-color: #4b4b4b;
   width: 5px;
   height: 5px;
   border-radius: 100%;
   margin: 1rem auto; }
 
-.large-img {
-  background: url("/imgs/forest.jpg") center/cover no-repeat; }
-
-.active-post {
-  background-color: white !important; }
-
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.active-post {
+  background-color: white; }
 
 .dark-bg {
   background-color: #46413f;
@@ -141,30 +55,21 @@
 .medium-bg {
   background-color: #dddddd; }
 
-li {
-  list-style: none; }
+.title-overlap {
+  margin: 3rem 0 -3rem 1rem;
+  z-index: 1; }
 
-.left-col,
-.right-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
+.placeholder-img {
+  background: url("/imgs/bridge.jpg") center/cover no-repeat;
+  height: 100%; }
 
-.margin-down {
-  margin: -4rem 0 0 2rem; }
-
-.large-img {
-  height: 35rem;
-  min-height: 2rem;
-  max-height: 35rem;
-  width: 100%; }
-
-.ls2 {
-  letter-spacing: 2px; }
+.placeholder-img2 {
+  background: url("/imgs/forest.jpg") center/cover no-repeat;
+  height: 100%; }
 
 small {
-  letter-spacing: 3px;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  letter-spacing: 5px;
   text-transform: uppercase;
   color: #9b9b9b; }
 
@@ -174,53 +79,50 @@ h2 {
   color: #242424; }
 
 h1 {
-  color: #242424;
   font-size: 2.5rem;
-  font-weight: 1;
-  text-transform: uppercase; }
+  font-weight: lighter;
+  text-transform: uppercase;
+  padding: 0.75rem; }
 
 h2 {
   color: #4e4e4e;
-  letter-spacing: 1px;
   font-size: 1.2rem;
-  font-weight: 1;
-  text-transform: capitalize;
-  font-weight: lighter; }
+  font-weight: lighter;
+  text-transform: capitalize; }
 
 h4 {
   color: #4e4e4e;
-  font-weight: 1;
   font-family: serif;
-  padding: 1rem;
+  font-weight: lighter;
   text-transform: capitalize; }
 
 p {
-  font-size: 0.7rem; }
+  font-size: 0.7rem;
+  letter-spacing: 1px; }
 
-a:hover {
-  opacity: 0.8; }
+.caption-text {
+  font-size: 1rem;
+  padding: 1rem 0; }
+
+.text-centered {
+  text-align: center; }
 
 a {
   color: inherit;
   text-decoration: none; }
+  a:hover {
+    opacity: 0.8; }
+  a:hover .post__img {
+    opacity: 0.8; }
 
-.full-img {
-  height: 100vh !important; }
+.btn {
+  font-size: 0.6rem;
+  color: #9b9b9b;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500; }
-
-section {
-  height: auto;
-  display: block; }
-
-.newsletter,
-header,
-.trending,
-.new-posts-container {
-  max-width: 1300px;
-  margin: 0 auto; }
+.dotted {
+  border-bottom: 1px dotted #9b9b9b; }
 
 .newsletter {
   -webkit-box-pack: justify;
@@ -246,22 +148,22 @@ header,
   margin: 0 0.3rem; }
 
 header {
-  padding: 1rem; }
-
-.logo {
+  padding: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .logo-img {
-    font-size: 3rem;
-    text-decoration: underline;
-    font-family: "Palatino Linotype", serif; }
-  .logo-text {
-    font-size: 1rem;
-    letter-spacing: 5px;
-    font-weight: 0;
-    margin-bottom: -1rem;
-    padding: 0.4rem; }
+
+.logo-img {
+  font-size: 3rem;
+  text-decoration: underline;
+  font-family: "Palatino Linotype", serif; }
+
+.logo-text {
+  font-size: 1rem;
+  letter-spacing: 5px;
+  font-weight: 0;
+  margin-bottom: -1rem;
+  padding: 0.4rem; }
 
 .logo,
 .nav-container {
@@ -278,9 +180,6 @@ header {
           justify-content: flex-end; }
 
 .nav-link {
-  font-size: 0.7rem;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
   margin: 0.3rem 0.7rem; }
   .nav-link-dropdown:hover .dropdown-content {
     visibility: visible;
@@ -292,7 +191,6 @@ header {
 
 .dropdown-content {
   background: #f1f1f1;
-  border-top: 1px solid #c7c7c7;
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -310,73 +208,85 @@ header {
 .nav-link-dropdown:last-of-type:hover .dropdown-content {
   margin-left: -120px; }
 
-.new-post {
-  padding: 0.75rem;
+.flex-post {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
-  .new-post-container {
-    text-align: center; }
-  .new-post__details {
+
+.post {
+  padding: 1rem; }
+  .post__details {
     padding: 1rem; }
-  .new-post__img {
-    background: url("/imgs/bridge.jpg") center/cover no-repeat;
+  .post--large {
+    position: relative; }
+    .post--large__img {
+      height: 90vh; }
+    .post--large__caption {
+      width: 50%;
+      background-color: white;
+      position: absolute;
+      bottom: 2.5rem;
+      left: 2.5rem;
+      padding: 4rem 3rem; }
+  .post__img {
     height: 40vw;
     min-height: 30rem;
     max-height: 50rem; }
-  .new-post__img:hover,
-  .new-post__title:hover h2 {
-    opacity: 0.8; }
 
-.trending {
-  padding: 7rem 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .trending-left {
-    text-align: center; }
-    .trending-left h1 {
-      text-align: left;
-      position: absolute; }
-    .trending-left .large-img {
-      margin-bottom: 1rem; }
-  .trending-right .articles-post {
-    width: 80%;
-    float: right;
-    padding: 1.5rem; }
-
-.section-header {
-  padding: 0rem 2rem 2rem;
-  text-align: center; }
+.grid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr; }
+  .grid-2 h1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: 1 / 1 / 2 / 4; }
+  .grid-2 .left-grid-col {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 1 / 3 / 2; }
+  .grid-2 .right-grid-col {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 2 / 3 / 3; }
 
 .grid-3 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end; }
-  .grid-3 div:last-of-type {
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr; }
+  .grid-3 .section-title {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 2 / 2 / 3; }
+  .grid-3 .section-title--link {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 3 / 2 / 4;
     -ms-grid-column-align: end;
         justify-self: end;
-    border-bottom: 1px dotted #9b9b9b; }
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
 
-.img-caption {
-  position: relative; }
+section {
+  max-width: 900px;
+  margin: 0 auto; }
 
-.captioned {
-  display: block;
-  width: 50%;
-  background-color: white;
-  position: absolute;
-  bottom: 2.5rem;
-  left: 2.5rem;
-  text-align: left;
-  padding: 4rem 3rem; }
-  .captioned__paragraph {
-    letter-spacing: 1px;
-    font-size: 1rem;
-    font-weight: 1;
-    line-height: 2;
-    padding: 1rem 0; }
+.title-overlap {
+  pointer-events: none; }
+
+.medium-bg {
+  margin: 7rem 0; }

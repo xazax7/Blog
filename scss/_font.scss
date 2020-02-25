@@ -1,61 +1,75 @@
-.ls2 {
-    letter-spacing: 2px;
-}
-
 small {
-    letter-spacing: 3px;
-    font-size: 0.7rem;
+    font-size: $small-font;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    color: $medium-font;
-}
+    color: $medium-font-color;
 
+
+}
 
 h1,
 h2 {
     font-family: serif;
-    color: $darker-font;
+    color: $darker-font-color;
 }
 
 h1 {
-    color: $darker-font;
-    font-size: 2.5rem;
-    font-weight: 1;
+    font-size: $large-font;
+    font-weight: lighter;
     text-transform: uppercase;
+    padding: 0.75rem;
 }
 
 h2 {
-    color: $dark-font;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-    font-weight: 1;
-    text-transform: capitalize;
+    color: $dark-font-color;
+    font-size: $medium-font;
     font-weight: lighter;
+    text-transform: capitalize;
 }
 
 h4 {
-    color: $dark-font;
-    font-weight: 1;
+    color: $dark-font-color;
     font-family: serif;
-    padding: 1rem;
+    font-weight: lighter;
     text-transform: capitalize;
 }
 
 p {
     font-size: 0.7rem;
+    letter-spacing: 1px;
 }
 
-
-
-a:hover {
-    opacity: 0.8;
-
+.caption-text {
+    font-size: 1rem;
+    padding: 1rem 0;
 }
+
+.text-centered {
+    text-align: center;
+}
+
 
 a {
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:hover .post__img {
+        opacity: 0.8;
+    }
+
     color: inherit;
     text-decoration: none;
+
 }
 
-.full-img {
-    height: 100vh !important;
+.btn {
+    font-size: $small-font;
+    color: $medium-font-color;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.dotted {
+    border-bottom: 1px dotted $medium-font-color;
 }

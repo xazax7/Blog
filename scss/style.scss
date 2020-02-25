@@ -1,7 +1,11 @@
 @import 'resets';
 @import 'utilities';
-@import 'font';
+@import 'variables';
 @import 'basic';
+@import 'font';
+
+
+
 
 // NEWSLETTER BAR STYLING
 .newsletter {
@@ -38,15 +42,14 @@
     margin: 0 0.3rem;
 }
 
-//HEADER STYLING
+// HEADER
 header {
     padding: 1rem;
+    align-items: center;
 }
 
+// LOGO
 .logo {
-    align-items: center;
-
-
     &-img {
         font-size: 3rem;
         text-decoration: underline;
@@ -78,9 +81,6 @@ header {
 
     // Nav-links
     &-link {
-        font-size: 0.7rem;
-        letter-spacing: 0.2rem;
-        text-transform: uppercase;
         margin: 0.3rem 0.7rem;
 
         // Nav-link dropdown functionality
@@ -99,7 +99,7 @@ header {
 // Nav link dropdown box
 .dropdown-content {
     background: rgb(241, 241, 241);
-    border-top: 1px solid rgb(199, 199, 199);
+    //border-top: 1px dotted rgb(199, 199, 199);
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -111,6 +111,7 @@ header {
     margin-left: -2rem;
     margin-top: 0.3rem;
 }
+
 
 // Sets Nav horizontal + search icon
 .nav-link-dropdown,
@@ -124,110 +125,93 @@ header {
 }
 
 
+.flex-post {
+
+    flex: 1;
+}
 
 // Front-page post catalog
-.new-post {
-
-    // Container for the three 'new posts'
-    &-container {
-        text-align: center;
-    }
-
-    padding: 0.75rem;
-    flex: 1;
+.post {
+    padding: 1rem;
 
     &__details {
         padding: 1rem;
     }
 
+    &--large {
+        position: relative;
+
+        &__img {
+            height: 90vh;
+
+        }
+
+        &__caption {
+            width: 50%;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            bottom: 2.5rem;
+            left: 2.5rem;
+            padding: 4rem 3rem;
+        }
+    }
 
     &__img {
-        background: url('/imgs/bridge.jpg') center/cover no-repeat;
         height: 40vw;
         min-height: 30rem;
         max-height: 50rem;
     }
 
-    // This is a hack
-    &__img:hover,
-    &__title:hover h2 {
-        opacity: 0.8;
-    }
-
-
 }
 
 
 
-// Front page "trending"-style post catalog
-.trending {
-    padding: 7rem 1rem;
-    display: flex;
 
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    &-left {
-        text-align: center;
-
-        h1 {
-            text-align: left;
-            position: absolute;
-        }
-
-        .large-img {
-            margin-bottom: 1rem;
-        }
-
-
-        .post-title {}
+    h1 {
+        grid-area: 1 / 1 / 2 / 4;
     }
 
-    &-right {
-        .articles {
-            &-post {
-                width: 80%;
-                float: right;
-                padding: 1.5rem;
-            }
-        }
+    .left-grid-col {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .right-grid-col {
+        grid-area: 2 / 2 / 3 / 3;
     }
 }
 
 // Front page section header
-.section-header {
-    padding: 0rem 2rem 2rem;
-    text-align: center;
-}
 
 .grid-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: flex-end;
+    grid-template-rows: 1fr;
+    // for last div align-items: flex-end;
 
-    div:last-of-type {
+    .section-title {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .section-title--link {
+        grid-area: 1 / 3 / 2 / 4;
         justify-self: end;
-        border-bottom: 1px dotted $medium-font;
+        align-self: flex-end;
     }
 }
 
-.img-caption {
-    position: relative;
+section {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.captioned {
-    display: block;
-    width: 50%;
-    background-color: white;
-    position: absolute;
-    bottom: 2.5rem;
-    left: 2.5rem;
-    text-align: left;
-    padding: 4rem 3rem;
+.title-overlap {
+    pointer-events: none;
+}
 
-    &__paragraph {
-        letter-spacing: 1px;
-        font-size: 1rem;
-        font-weight: 1;
-        line-height: 2;
-        padding: 1rem 0;
-    }
+.medium-bg {
+    margin: 7rem 0;
 }

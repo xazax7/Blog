@@ -1,24 +1,76 @@
+// Basic styling
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
-
-section {
-    height: auto;
-    display: block;
-    //margin-bottom: 7rem;
+li {
+    list-style: none;
 }
 
 
-.newsletter,
-header,
-.trending,
-.new-posts-container {
-    max-width: 1300px;
+// Style Elements
+.vertical-bar {
+    width: 1px;
+    height: 20px;
+    margin-bottom: -5px;
+    margin-right: 1rem;
+    background: rgba(255, 255, 255, .5);
+}
+
+.horizontal-bar {
+    width: 90%;
+    height: 1px;
+    background: rgb(218, 218, 218);
     margin: 0 auto;
+    margin: 3rem;
 }
 
-.new-post {}
+.dot-decoration {
+    background-color: rgb(75, 75, 75);
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    margin: 1rem auto;
+}
 
-.trending {}
+
+
+// Utility Classes
+.flex {
+    display: flex;
+}
+
+.active-post {
+    background-color: white;
+}
+
+.dark-bg {
+    background-color: $dark-bg-color;
+    color: $light-font-color;
+
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.medium-bg {
+    background-color: $medium-bg-color;
+}
+
+.title-overlap {
+    margin: 3rem 0 -3rem 1rem;
+    z-index: 1;
+}
+
+
+
+.placeholder-img {
+    background: url('/imgs/bridge.jpg') center/cover no-repeat;
+    height: 100%;
+}
+
+.placeholder-img2 {
+    background: url('/imgs/forest.jpg') center/cover no-repeat;
+    height: 100%;
+}
