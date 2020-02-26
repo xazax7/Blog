@@ -16,7 +16,8 @@ li {
   height: 20px;
   margin-bottom: -5px;
   margin-right: 1rem;
-  background: rgba(255, 255, 255, 0.5); }
+  background: rgba(255, 255, 255, 0.5);
+  display: inline-block; }
 
 .horizontal-bar {
   width: 90%;
@@ -57,7 +58,9 @@ li {
 
 .title-overlap {
   margin: 3rem 0 -3rem 1rem;
-  z-index: 1; }
+  z-index: 10;
+  display: block;
+  pointer-events: none; }
 
 .placeholder-img {
   background: url("/imgs/bridge.jpg") center/cover no-repeat;
@@ -77,6 +80,11 @@ h1,
 h2 {
   font-family: serif;
   color: #242424; }
+
+.newsletter-container,
+header,
+main {
+  overflow-x: hidden; }
 
 h1 {
   font-size: 2.5rem;
@@ -117,31 +125,31 @@ a {
 
 .btn {
   font-size: 0.6rem;
-  color: #9b9b9b;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase; }
 
+.btn-light {
+  color: #9b9b9b; }
+
 .dotted {
-  border-bottom: 1px dotted #9b9b9b; }
+  border-bottom: 1px dotted; }
 
 .newsletter {
+  padding: 0.5rem 1rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .newsletter-container {
-    padding: 0.5rem 1rem; }
-  .newsletter div,
-  .newsletter p {
+  .newsletter-title__text {
     display: inline-block; }
-  .newsletter-signup input, .newsletter-signup-btn {
+  .newsletter-signup input, .newsletter-signup__btn {
     font-weight: bolder;
     background: none;
     border: none;
     caret-color: white; }
-  .newsletter-signup-btn {
+  .newsletter-signup__btn {
     cursor: pointer; }
 
 .social-media-icons i {
@@ -153,68 +161,67 @@ header {
       -ms-flex-align: center;
           align-items: center; }
 
-.logo-img {
-  font-size: 3rem;
-  text-decoration: underline;
-  font-family: "Palatino Linotype", serif; }
-
-.logo-text {
-  font-size: 1rem;
-  letter-spacing: 5px;
-  font-weight: 0;
-  margin-bottom: -1rem;
-  padding: 0.4rem; }
-
-.logo,
-.nav-container {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto; }
-
-.nav-container {
+.logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center; }
+  .logo-img {
+    font-size: 3rem;
+    text-decoration: underline;
+    font-family: "Palatino Linotype", serif; }
+  .logo-text {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    font-weight: 0;
+    margin-bottom: -1rem;
+    padding: 0.4rem; }
+
+.nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end; }
-
-.nav-link {
-  margin: 0.3rem 0.7rem; }
-  .nav-link-dropdown:hover .dropdown-content {
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .nav-container {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .nav-dropdown {
+    margin: 0 0.75rem;
+    text-align: center; }
+    .nav-dropdown-content {
+      background: #f1f1f1;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      z-index: 1;
+      padding: 1rem 0.5rem;
+      margin-left: -3.2rem;
+      min-width: 180px; }
+      .nav-dropdown-content__link {
+        display: block; }
+  .nav-dropdown:hover .nav-dropdown-content {
     visibility: visible;
     opacity: 1;
     -webkit-transition: 0.3s;
-    transition: 0.3s;
-    margin-left: -3.5rem;
-    margin-top: 0px; }
-
-.dropdown-content {
-  background: #f1f1f1;
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  z-index: 1;
-  padding: 15px 18px;
-  text-align: center;
-  min-width: 180px;
-  margin-left: -2rem;
-  margin-top: 0.3rem; }
-
-.nav-link-dropdown,
-.fa-search {
-  display: inline-block; }
-
-.nav-link-dropdown:last-of-type:hover .dropdown-content {
-  margin-left: -120px; }
-
-.flex-post {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
+    transition: 0.3s; }
+  .nav-dropdown:last-of-type .nav-dropdown-content {
+    margin-left: -7rem; }
+  .nav-link {
+    padding: 0.4rem; }
 
 .post {
   padding: 1rem; }
+  .post--flex {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
   .post__details {
     padding: 1rem; }
   .post--large {
@@ -281,12 +288,11 @@ header {
     -ms-flex-item-align: end;
         align-self: flex-end; }
 
-section {
-  max-width: 900px;
+section,
+header,
+.newsletter {
+  max-width: 1200px;
   margin: 0 auto; }
-
-.title-overlap {
-  pointer-events: none; }
 
 .medium-bg {
   margin: 7rem 0; }

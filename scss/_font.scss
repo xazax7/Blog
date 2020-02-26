@@ -13,6 +13,12 @@ h2 {
     color: $darker-font-color;
 }
 
+.newsletter-container,
+header,
+main {
+    overflow-x: hidden;
+}
+
 h1 {
     font-size: $large-font;
     font-weight: lighter;
@@ -65,11 +71,14 @@ a {
 
 .btn {
     font-size: $small-font;
-    color: $medium-font-color;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
+.btn-light {
+    color: $medium-font-color;
+}
+
 .dotted {
-    border-bottom: 1px dotted $medium-font-color;
+    border-bottom: 1px dotted
 }

@@ -9,13 +9,14 @@ li {
 }
 
 
-// Style Elements
+// Stylish Elements
 .vertical-bar {
     width: 1px;
     height: 20px;
     margin-bottom: -5px;
     margin-right: 1rem;
     background: rgba(255, 255, 255, .5);
+    display: inline-block;
 }
 
 .horizontal-bar {
@@ -60,11 +61,13 @@ li {
 
 .title-overlap {
     margin: 3rem 0 -3rem 1rem;
-    z-index: 1;
+    z-index: 10;
+    display: block;
+    pointer-events: none;
 }
 
 
-
+// Placeholders
 .placeholder-img {
     background: url('/imgs/bridge.jpg') center/cover no-repeat;
     height: 100%;

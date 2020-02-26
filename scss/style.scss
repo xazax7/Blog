@@ -9,30 +9,26 @@
 
 // NEWSLETTER BAR STYLING
 .newsletter {
-    &-container {
-        padding: 0.5rem 1rem;
-    }
-
+    padding: 0.5rem 1rem;
     justify-content: space-between;
     align-items: center;
 
-    // Keeps contents inline
-    div,
-    p {
+    // Keeps newsletter text inline
+    &-title__text {
         display: inline-block;
     }
 
     &-signup {
 
         input,
-        &-btn {
+        &__btn {
             font-weight: bolder;
             background: none;
             border: none;
             caret-color: rgb(255, 255, 255);
         }
 
-        &-btn {
+        &__btn {
             cursor: pointer;
         }
     }
@@ -50,14 +46,16 @@ header {
 
 // LOGO
 .logo {
+    align-items: center;
+
     &-img {
-        font-size: 3rem;
+        font-size: $logo-img-font;
         text-decoration: underline;
         font-family: "Palatino Linotype", serif;
     }
 
     &-text {
-        font-size: 1rem;
+        font-size: $medium-font;
         letter-spacing: 5px;
         font-weight: 0;
         margin-bottom: -1rem;
@@ -65,79 +63,75 @@ header {
     }
 }
 
-.logo,
-.nav-container {
-    flex: auto;
-}
 
 // Nav styling
 .nav {
 
     // Nav container
     &-container {
+        flex: auto;
         align-items: center;
         justify-content: flex-end;
     }
 
-    // Nav-links
-    &-link {
-        margin: 0.3rem 0.7rem;
+    // Nav Link & Dropdown links
+    &-dropdown {
+        margin: 0 0.75rem;
+        text-align: center;
 
-        // Nav-link dropdown functionality
-        &-dropdown:hover .dropdown-content {
-            visibility: visible;
-            opacity: 1;
-            transition: 0.3s;
-            margin-left: -3.5rem;
-            margin-top: 0px;
+        &-content {
+            background: rgb(241, 241, 241);
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            z-index: 1;
+            padding: 1rem 0.5rem;
+            margin-left: -3.2rem;
+            min-width: 180px;
+
+            &__link {
+                display: block;
+            }
         }
     }
 
+    // Nav Link dropdown functionality
+    &-dropdown:hover .nav-dropdown-content {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.3s;
+    }
 
-}
+    &-dropdown:last-of-type .nav-dropdown-content {
+        margin-left: -7rem;
+    }
 
-// Nav link dropdown box
-.dropdown-content {
-    background: rgb(241, 241, 241);
-    //border-top: 1px dotted rgb(199, 199, 199);
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    z-index: 1;
-    padding: 15px 18px;
-    text-align: center;
-    min-width: 180px;
-    // Values -before- it changes position via hover
-    margin-left: -2rem;
-    margin-top: 0.3rem;
-}
+    justify-content: flex-end;
+    flex-wrap: wrap;
 
-
-// Sets Nav horizontal + search icon
-.nav-link-dropdown,
-.fa-search {
-    display: inline-block;
-}
-
-// Fix positioning of dropdown on last link. Could do media query? Useful for mobile?
-.nav-link-dropdown:last-of-type:hover .dropdown-content {
-    margin-left: -120px;
+    // Nav-links
+    &-link {
+        padding: 0.4rem;
+    }
 }
 
 
-.flex-post {
 
-    flex: 1;
-}
 
 // Front-page post catalog
 .post {
     padding: 1rem;
 
+    &--flex {
+        flex: 1;
+    }
+
+    // Post text
     &__details {
         padding: 1rem;
     }
 
+    // For full-image posts
     &--large {
         position: relative;
 
@@ -184,13 +178,10 @@ header {
     }
 }
 
-// Front page section header
-
 .grid-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    // for last div align-items: flex-end;
 
     .section-title {
         grid-area: 1 / 2 / 2 / 3;
@@ -203,15 +194,15 @@ header {
     }
 }
 
-section {
-    max-width: 900px;
+// Cheap media query
+section,
+header,
+.newsletter {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.title-overlap {
-    pointer-events: none;
-}
-
+// White space adjustment between posts
 .medium-bg {
     margin: 7rem 0;
 }
